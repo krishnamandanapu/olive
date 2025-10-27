@@ -1,0 +1,211 @@
+/* Dog Breeds Directory - Component Styles & Animations */
+
+/* Page Load Animation */
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Entrance with Stagger */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Skeleton Pulse */
+@keyframes skeletonPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shake Animation for Errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+}
+
+/* Page Change Transition */
+@keyframes pageChange {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Classes */
+.page-load {
+  animation: pageLoad 600ms ease-out;
+}
+
+.card-entrance {
+  animation: cardEntrance 500ms ease-out both;
+}
+
+.skeleton-pulse {
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  border-color: oklch(var(--primary));
+  border-top-color: transparent;
+}
+
+.shake {
+  animation: shake 400ms ease-out;
+}
+
+.page-change {
+  animation: pageChange 400ms ease-out;
+}
+
+/* Breed Card Styles */
+.breed-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+}
+
+.breed-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.breed-card:active {
+  transform: scale(0.98);
+}
+
+.breed-card img {
+  transition: all 400ms ease-out;
+}
+
+.breed-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Pagination Button Styles */
+.pagination-btn {
+  transition: all 200ms ease-out;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: oklch(var(--primary)) !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+.pagination-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.pagination-btn.active {
+  background-color: oklch(var(--primary)) !important;
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Page Jump Input */
+.page-input:focus {
+  outline: none;
+  border-color: oklch(var(--ring)) !important;
+  box-shadow: 0 0 0 3px oklch(var(--ring) / 0.2);
+  transition: all 250ms ease-out;
+}
+
+.page-input.error {
+  border-color: oklch(var(--destructive)) !important;
+  background-color: oklch(var(--destructive) / 0.05) !important;
+}
+
+/* Go Button */
+.go-btn {
+  transition: all 200ms ease-out;
+}
+
+.go-btn:hover {
+  background-color: oklch(var(--accent)) !important;
+  transform: scale(1.05);
+}
+
+.go-btn:active {
+  transform: scale(0.92);
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: oklch(var(--background) / 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Error Container */
+.error-container {
+  animation: pageLoad 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Stagger Animation for Cards */
+.breed-card:nth-child(1) { animation-delay: 0ms; }
+.breed-card:nth-child(2) { animation-delay: 60ms; }
+.breed-card:nth-child(3) { animation-delay: 120ms; }
+.breed-card:nth-child(4) { animation-delay: 180ms; }
+.breed-card:nth-child(5) { animation-delay: 240ms; }
+.breed-card:nth-child(6) { animation-delay: 300ms; }
+.breed-card:nth-child(7) { animation-delay: 360ms; }
+.breed-card:nth-child(8) { animation-delay: 420ms; }
+.breed-card:nth-child(9) { animation-delay: 480ms; }
+.breed-card:nth-child(10) { animation-delay: 540ms; }
+.breed-card:nth-child(11) { animation-delay: 600ms; }
+.breed-card:nth-child(12) { animation-delay: 660ms; }
+.breed-card:nth-child(13) { animation-delay: 720ms; }
+.breed-card:nth-child(14) { animation-delay: 780ms; }
+.breed-card:nth-child(15) { animation-delay: 840ms; }

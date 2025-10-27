@@ -1,0 +1,121 @@
+/* Dog Breeds Directory - Playful Modern Theme */
+
+:root {
+  /* Color Palette - Warm & Playful */
+  --background: oklch(0.9900 0.0050 85.0000);
+  --foreground: oklch(0.2500 0.0100 60.0000);
+  --card: oklch(1.0000 0 0);
+  --card-foreground: oklch(0.2500 0.0100 60.0000);
+  --popover: oklch(1.0000 0 0);
+  --popover-foreground: oklch(0.2500 0.0100 60.0000);
+
+  /* Primary - Warm Amber (Dog-friendly energy) */
+  --primary: oklch(0.6800 0.1500 65.0000);
+  --primary-foreground: oklch(1.0000 0 0);
+
+  /* Secondary - Soft Sage Green */
+  --secondary: oklch(0.7500 0.0800 140.0000);
+  --secondary-foreground: oklch(0.2500 0.0100 60.0000);
+
+  /* Muted - Warm Cream */
+  --muted: oklch(0.9600 0.0200 85.0000);
+  --muted-foreground: oklch(0.5500 0.0150 60.0000);
+
+  /* Accent - Terracotta */
+  --accent: oklch(0.7200 0.1200 45.0000);
+  --accent-foreground: oklch(1.0000 0 0);
+
+  --destructive: oklch(0.5800 0.2200 25.0000);
+  --destructive-foreground: oklch(1.0000 0 0);
+
+  /* Borders & Inputs */
+  --border: oklch(0.9000 0.0150 85.0000);
+  --input: oklch(0.9000 0.0150 85.0000);
+  --ring: oklch(0.6800 0.1500 65.0000);
+
+  /* Charts (if needed) */
+  --chart-1: oklch(0.6800 0.1500 65.0000);
+  --chart-2: oklch(0.7500 0.0800 140.0000);
+  --chart-3: oklch(0.7200 0.1200 45.0000);
+  --chart-4: oklch(0.6500 0.1800 280.0000);
+  --chart-5: oklch(0.7000 0.1500 180.0000);
+
+  /* Typography - Friendly & Modern */
+  --font-sans: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Border Radius - Friendly Rounded */
+  --radius: 0.75rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Shadows - Soft & Welcoming */
+  --shadow-2xs: 0 1px 2px 0px hsl(40 30% 50% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(40 30% 50% / 0.08);
+  --shadow-sm: 0 2px 4px 0px hsl(40 30% 50% / 0.10), 0 1px 2px -1px hsl(40 30% 50% / 0.08);
+  --shadow: 0 4px 6px -1px hsl(40 30% 50% / 0.10), 0 2px 4px -2px hsl(40 30% 50% / 0.08);
+  --shadow-md: 0 6px 12px -2px hsl(40 30% 50% / 0.12), 0 3px 6px -3px hsl(40 30% 50% / 0.10);
+  --shadow-lg: 0 10px 20px -3px hsl(40 30% 50% / 0.15), 0 4px 8px -4px hsl(40 30% 50% / 0.12);
+  --shadow-xl: 0 20px 30px -4px hsl(40 30% 50% / 0.18), 0 8px 12px -6px hsl(40 30% 50% / 0.15);
+  --shadow-2xl: 0 25px 50px -12px hsl(40 30% 50% / 0.25);
+
+  /* Spacing */
+  --spacing: 0.25rem;
+  --tracking-normal: -0.01em;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  background-color: oklch(var(--background)) !important;
+  color: oklch(var(--foreground)) !important;
+  letter-spacing: var(--tracking-normal) !important;
+  line-height: 1.6 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans) !important;
+  font-weight: 600 !important;
+  color: oklch(var(--foreground)) !important;
+  letter-spacing: -0.02em !important;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
+
+/* Utility Classes */
+.shadow-card {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
